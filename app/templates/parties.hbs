@@ -1,0 +1,20 @@
+{{#md-card-collapsible class="popout parties"}}
+  {{#each model.objects as |partyObjects|}}
+    {{#each partyObjects.beneficiaries as |party|}}
+    {{#md-collapsible title=party.name class="party-card-title"}}
+      Party benefitting: {{party.title}} {{party.name}}<br>
+      Party: {{party.party}}<br>
+    {{partyObjects.entertainment}}<br>
+    Start time: {{partyObjects.start_date}} {{partyObjects.start_time}}<br>
+    Contribution info: {{partyObjects.contributions_info}}<br>
+    Checks payable to: {{partyObjects.make_checks_payable_to}}<br>
+    <h5>Party down at</h5>
+    {{partyObjects.venue.venue_name}}<br>
+    {{partyObjects.venue.address1}}<br>
+    {{partyObjects.venue.city}}, {{partyObjects.venue.state}}
+    <br>
+  {{/md-collapsible}}
+  {{/each}}
+  {{/each}}
+{{/md-card-collapsible}}
+{{#link-to 'awaiting-signature'}}See bills awaiting signature{{/link-to}}
