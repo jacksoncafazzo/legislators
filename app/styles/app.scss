@@ -1,18 +1,28 @@
 @import 'materialize';
 @import 'ember-cli-materialize';
 
-#zip {
+.container {
+  width: 80%;
+}
+#zi
+p {
   width: 200px;
 }
 
 .parties {
-  width: 400px;
+  text-align: center;
 }
+
 .party-card-title {
   .collapsible-body {
+    text-align: left;
     background-color: papayawhip;
   }
   .collapsible-header {
     background-color: pink;
   }
+}
+
+.star {
+  float: right;
 }

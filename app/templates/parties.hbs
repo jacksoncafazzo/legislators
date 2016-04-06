@@ -1,3 +1,11 @@
+<div class="row center">
+  <div class="col s6">
+    <h2>Parties for</h2> <h1>{{model.objects.[0].beneficiaries.[0].name}}</h1>
+  </div>
+  <div class="col sm6">
+    <img class="star" src="/images/giphy.gif" alt="the more you know star" />
+  </div>
+</div>
 {{#md-card-collapsible class="popout parties"}}
   {{#each model.objects as |partyObjects|}}
     {{#each partyObjects.beneficiaries as |party|}}
